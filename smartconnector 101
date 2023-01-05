@@ -1,0 +1,85 @@
+# ArcSight SmartConnectors 101
+# Date: 05/Jan/2023, 
+# Author: sekar sundaram
+# The purpose of this document is to learn ArcSight, particularly the SmartConntors. 
+# This is a questions and answers kind of document, the idea is to try to answers these questions, when one dont know the answers, he can search and learn. 
+
+1. What are the different types of smartconnectors?
+2. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The connectors support the following data collection and event reporting formats:
+l
+Log File Readers (including text and log file)
+l
+Syslog
+l
+SNMP
+l
+Database
+l
+XML
+l
+Proprietary protocols, such as OPSEC
+The ArcSight ESM Console, ESM Manager, and connectors communicate using HTTP over Secure Sockets Layer (SSL also referred to as HTTPS).
