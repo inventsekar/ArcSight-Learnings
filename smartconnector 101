@@ -117,17 +117,64 @@ How can you monitor the bandwidth usage of the SmartConnector?
 
 
 
+#################################################################
+# 23rd Jan 2023 monday 
+# SmartConnector Installation and User Guide 8.3
+#################################################################
+SmartConnector Features:
+----------------------------
+Smart Connectors can both receive and retrieve information from network devices. 
+If the device sends information, the connector becomes a receiver. 
+But, if the device does not send information, the connector can retrieve it.
+
+The connectors support the following data collection and event reporting formats:
+
+Log File Readers (including text and log file)
+Syslog
+SNMP
+Database
+XML
+Proprietary protocols, such as OPSEC
+
+Data Encryption
+------------------
+For optimum performance, the number of encrypted fields must be limited to 20.
+
+Event Aggregation
+---------------------
+For example, if the connector is configured to aggregate events with a certain Source IP and Port, Destination IP and Port, 
+and Device Action whenever the events occur 10 times in 30 seconds. If 10 events with these matching values are received by 
+the connector within that time frame, they are grouped into a single event with an aggregated event count of 10.
+
+If the 30-seconds time frame expires and the connector receives only two matching events, the connector creates a single aggregated
+event with an aggregated event count of two. If 900 matching events are generated during 30 seconds, the connector creates 90 aggregated 
+events, each with an aggregated event count of 10.
+Firewalls are a good candidate for aggregation because of the volume of events with similar data coming in from multiple devices.
+
+FIPS Compliance - Federal Information Processing Standards
+------------------------------------------------------------
+When FIPS-compliant connectors connect to a non-FIPS-compliant destination, the solution is not considered FIPS compliant. 
+Also, when the destination is installed in FIPS Suite B compliant mode, the SmartConnectors also must be installed in FIPS Suite B compliant mode.
 
 
+FIPS Compliant Connectors
+-------------------------------
+The following connectors are FIPS compliant:
+All syslog connectors
+All file reader connectors
+All SNMP connectors
+Most database connectors (except Oracle Audit DB and when using SQL Server drivers with encryption)
+Cisco Secure IPS SDEE connectors
+Sourcefire Defense Center eStreamer connector
+Check Point OPSEC NG connector
 
 
-
-
-
-
-
-
-
+FIPS Non-Compliant SmartConnector
+---------------------------------------
+The following SmartConnector are not FIPS compliant:
+Database connectors using SQL Server drivers with encryption
+Connectors using Oracle drivers
+Connectors running on AIX or Micro Focus UX platforms only
 
 
 
